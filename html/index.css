@@ -1,0 +1,331 @@
+/* ------------------------------
+   General Styling
+--------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* ------------------------------
+   Header
+--------------------------------*/
+
+header {
+    background-color: #172a46;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+header h2 {
+    margin: 5px 0 25px;
+    font-weight: normal;
+}
+
+
+/* ------------------------------
+   Navigation
+--------------------------------*/
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #61dafb;
+}
+
+
+/* ------------------------------
+   Sections
+--------------------------------*/
+
+.section {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+    text-align: left;
+    font-size: 28px;
+    font-weight: bold;
+    color: #172a46;
+    border-bottom: 3px solid #61dafb;
+    padding-bottom: 8px;
+}
+
+
+/* ------------------------------
+   Introduction
+--------------------------------*/
+
+#introduction p {
+    text-align: justify;
+}
+
+figure {
+    text-align: center;
+    margin-top: 30px;
+}
+
+figure img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #172a46;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+
+/* ------------------------------
+   Experience
+--------------------------------*/
+
+.experience-box p:nth-child(odd) {
+    font-weight: 300;
+}
+
+.experience-box p:nth-child(even) {
+    font-weight: 700;
+}
+
+.experience-box p {
+    background-color: #f2f4f7;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 5px solid #172a46;
+    border-radius: 5px;
+}
+
+
+/* ------------------------------
+   Skills Table
+--------------------------------*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th {
+    background-color: #172a46;
+    color: white;
+    padding: 15px;
+}
+
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f4f7;
+}
+
+tr:hover {
+    background-color: #dff6ff;
+}
+
+
+/* ------------------------------
+   Projects
+--------------------------------*/
+
+.project-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background-color: #172a46;
+    color: white;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    color: #61dafb;
+}
+
+
+/* ------------------------------
+   YouTube Video
+--------------------------------*/
+
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+.video-container iframe {
+    width: 80%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+}
+
+
+/* ------------------------------
+   Form
+--------------------------------*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #172a46;
+}
+
+.gender {
+    display: flex;
+    gap: 20px;
+}
+
+.gender label {
+    font-weight: normal;
+}
+
+.gender input {
+    width: auto;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background-color: #172a46;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #61dafb;
+    color: #172a46;
+}
+
+
+/* ------------------------------
+   Footer
+--------------------------------*/
+
+footer {
+    text-align: center;
+    background-color: #172a46;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* ------------------------------
+   Responsive Design
+--------------------------------*/
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .section {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .project-container {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .video-container iframe {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
